@@ -11,7 +11,7 @@ CHAIN = Chain(
     short_names=["arb", "arbitrum"],
     gas_token="ETH",
     poa=False,
-    liquorice_settlement_address=to_checksum_address("0xAcA684A3F64e0eae4812B734E3f8f205D3EEd167"),
+    liquorice_settlement_address=to_checksum_address("0x0448633eb8B0A42EfED924C42069E0DcF08fb552"),
 )
 USDT = ERC20Token(
     name="Arbitrum USDT",

@@ -10,7 +10,7 @@ def test_token_hashable():
         name="Arbitrum",
         id=42161,
         liquorice_settlement_address=to_checksum_address(
-            "0xAcA684A3F64e0eae4812B734E3f8f205D3EEd167"
+            "0x0448633eb8B0A42EfED924C42069E0DcF08fb552"
         ),
     )
 

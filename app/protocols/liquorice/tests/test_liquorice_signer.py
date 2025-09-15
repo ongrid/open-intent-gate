@@ -58,6 +58,7 @@ def test_liquorice_signer(signer):
     assert signed_quote.levels[0].signer == signer.account.address
     # Check if the signature is present
     assert isinstance(signed_quote.levels[0].signature, HexBytes)
+    signed_quote.levels[0].signature
     assert signed_quote.levels[0].signature == HexBytes(
-        "0x6d512bc0bf3388a27968202e7b516e4777fda5b06be7b8bcd04ad37c103d776b3ea2132045a41e07e7aa9f552c6ad9fda33d53904d09a7cc11abd4a73f024b401c"
+        "0x1ab701a1bd6e45ea4a836e1348688de0e29556ed81272cea92ebae3ba7e0495450420312d1bbe0b81008da5f8a0fb769df0bdf4025bd5acaaceed1ff96c785071c"
     )

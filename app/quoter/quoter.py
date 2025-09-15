@@ -82,7 +82,7 @@ class LiquoriceQuoter:
                     assert rfq.baseTokenAmount > 0
                     receive_base_token_amount = base_token.raw_to_decimal(rfq.baseTokenAmount)
                     send_quote_token_amount = min(
-                        receive_base_token_amount * Decimal("1.05"), quote_token.balance
+                        receive_base_token_amount * Decimal("1.005"), quote_token.balance
                     )
                     send_quote_token_raw_amount = quote_token.decimal_to_raw(
                         send_quote_token_amount
