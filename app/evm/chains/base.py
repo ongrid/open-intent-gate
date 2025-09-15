@@ -12,7 +12,7 @@ CHAIN = Chain(
     short_names=["base"],
     gas_token="BASE",
     poa=False,
-    liquorice_settlement_address=to_checksum_address(LIQUORICE_SETTLEMENT_ADDRESS),
+    liquorice_settlement_address=LIQUORICE_SETTLEMENT_ADDRESS,
 )
 WETH = ERC20Token(
     name="Base WETH",

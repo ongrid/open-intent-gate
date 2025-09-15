@@ -12,7 +12,7 @@ CHAIN = Chain(
     short_names=["eth", "ethereum"],
     gas_token="ETH",
     poa=False,
-    liquorice_settlement_address=to_checksum_address(LIQUORICE_SETTLEMENT_ADDRESS),
+    liquorice_settlement_address=LIQUORICE_SETTLEMENT_ADDRESS,
 )
 USDT = ERC20Token(
     name="Tether USDT",
