@@ -1,6 +1,7 @@
 # pylint: disable=missing-module-docstring,duplicate-code
 from web3.main import to_checksum_address
 
+from ...protocols.liquorice.const import LIQUORICE_SETTLEMENT_ADDRESS
 from ...schemas.chain import Chain
 from ...schemas.token import ERC20Token
 
@@ -11,7 +12,7 @@ CHAIN = Chain(
     short_names=["base"],
     gas_token="BASE",
     poa=False,
-    liquorice_settlement_address=to_checksum_address("0x0448633eb8B0A42EfED924C42069E0DcF08fb552"),
+    liquorice_settlement_address=to_checksum_address(LIQUORICE_SETTLEMENT_ADDRESS),
 )
 WETH = ERC20Token(
     name="Base WETH",
