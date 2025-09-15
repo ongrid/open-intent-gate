@@ -24,7 +24,7 @@ def mock_chain() -> Chain:
         gas_token="GAS123",
         ws_rpc_url="wss://test.chain123.com",
         liquorice_settlement_address=to_checksum_address(
-            "0xAcA684A3F64e0eae4812B734E3f8f205D3EEd167"
+            "0x0448633eb8B0A42EfED924C42069E0DcF08fb552"
         ),
         skeeper_address=to_checksum_address("0x28dD63f87d28db3d2ec784f57Ba5EFBB0aA22Ed3"),
         tokens=[],
