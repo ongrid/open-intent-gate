@@ -15,6 +15,11 @@ from app.metrics.metrics import metrics
 from app.protocols.liquorice.schemas import QuoteLevelLite, RFQMessage, RFQQuoteMessage
 from app.protocols.liquorice.signer import Web3Signer
 
+# Premium multiplier for stablecoin's default rate to force the quoter
+# to always quote slightly above 1:1 for testing purposes.
+# In real-world usage this should be adjusted based on market conditions.
+QUOTE_PREMIUM = Decimal("1.003")
+
 log = getLogger(__name__)
 
 
@@ -82,7 +87,7 @@ class LiquoriceQuoter:
                     assert rfq.baseTokenAmount > 0
                     receive_base_token_amount = base_token.raw_to_decimal(rfq.baseTokenAmount)
                     send_quote_token_amount = min(
-                        receive_base_token_amount * Decimal("1.005"), quote_token.balance
+                        receive_base_token_amount * QUOTE_PREMIUM, quote_token.balance
                     )
                     send_quote_token_raw_amount = quote_token.decimal_to_raw(
                         send_quote_token_amount
