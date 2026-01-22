@@ -14,20 +14,20 @@ CHAIN = Chain(
     poa=False,
     liquorice_settlement_address=LIQUORICE_SETTLEMENT_ADDRESS,
 )
-WETH = ERC20Token(
-    name="Base WETH",
-    symbol="WETH",
-    chain=CHAIN,
-    address=to_checksum_address("0x4200000000000000000000000000000000000006"),
-    decimals=18,
-)
-CB_BTC = ERC20Token(
-    name="Coinbase Wrapped BTC",
-    symbol="cbBTC",
-    chain=CHAIN,
-    address=to_checksum_address("0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"),
-    decimals=8,
-)
+# WETH = ERC20Token(
+#     name="Base WETH",
+#     symbol="WETH",
+#     chain=CHAIN,
+#     address=to_checksum_address("0x4200000000000000000000000000000000000006"),
+#     decimals=18,
+# )
+# CB_BTC = ERC20Token(
+#     name="Coinbase Wrapped BTC",
+#     symbol="cbBTC",
+#     chain=CHAIN,
+#     address=to_checksum_address("0xcbB7C0000aB88B473b1f5aFd9ef808440eed33Bf"),
+#     decimals=8,
+# )
 USDC = ERC20Token(
     name="USDC on Base",
     symbol="USDC",
@@ -35,10 +35,17 @@ USDC = ERC20Token(
     address=to_checksum_address("0x833589fCD6eDb6E08f4c7C32D4f71b54bdA02913"),
     decimals=6,
 )
-WBTC = ERC20Token(
-    name="Wrapped BTC",
-    symbol="WBTC",
+USDT = ERC20Token(
+    name="USDT on Base",
+    symbol="USDT",
     chain=CHAIN,
-    address=to_checksum_address("0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"),
-    decimals=8,
+    address=to_checksum_address("0xfde4C96c8593536E31F229EA8f37b2ADa2699bb2"),
+    decimals=6,
 )
+# WBTC = ERC20Token(
+#     name="Wrapped BTC",
+#     symbol="WBTC",
+#     chain=CHAIN,
+#     address=to_checksum_address("0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"),
+#     decimals=8,
+# )
