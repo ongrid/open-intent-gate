@@ -33,13 +33,13 @@ def test_registry_with_data(registry_from_inventory: ChainRegistry):
     assert registry_from_inventory.chain_by_id[42161].id == 42161
     assert len(registry_from_inventory.token_by_chain_id_and_address) > 0
     token = registry_from_inventory.token_by_chain_id_and_address[
-        (1, "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2")
+        (1, "0xdAC17F958D2ee523a2206206994597C13D831ec7")
     ]
     assert isinstance(token, ERC20Token)
-    assert token.name == "Wrapped Ether"
-    assert token.symbol == "WETH"
+    assert token.name == "Tether USDT"
+    assert token.symbol == "USDT"
     assert token.chain.id == 1
-    assert token.address == "0xC02aaA39b223FE8D0A0e5C4F27eAD9083C756Cc2"
+    assert token.address == "0xdAC17F958D2ee523a2206206994597C13D831ec7"
 
 
 def test_get_chain_by_id(registry_from_inventory: ChainRegistry):
@@ -61,15 +61,15 @@ def test_get_token_by_chain_id_and_address(registry_from_inventory: ChainRegistr
     """Test getting token by chain ID and address."""
     # Test existing token
     token = registry_from_inventory.get_token_by_chain_id_and_address(
-        8453, "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
+        1, "0xdAC17F958D2ee523a2206206994597C13D831ec7"
     )
     assert token is not None
     assert isinstance(token, ERC20Token)
-    assert token.name == "Wrapped BTC"
-    assert token.symbol == "WBTC"
-    assert token.chain.id == 8453
-    assert token.address == "0x0555E30da8f98308EdB960aa94C0Db47230d2B9c"
-    assert token.decimals == 8
+    assert token.name == "Tether USDT"
+    assert token.symbol == "USDT"
+    assert token.chain.id == 1
+    assert token.address == "0xdAC17F958D2ee523a2206206994597C13D831ec7"
+    assert token.decimals == 6
 
     # Test non-existent token
     assert (

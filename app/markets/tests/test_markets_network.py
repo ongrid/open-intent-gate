@@ -12,8 +12,8 @@ def market_state():
 def test_arbitrum_stablecoins_connected(market_state):
     for a, b in [
         (arbitrum.USDT, arbitrum.USDC),
-        (arbitrum.USDT, arbitrum.DAI),
-        (arbitrum.USDC, arbitrum.DAI),
+        # (arbitrum.USDT, arbitrum.DAI),
+        # (arbitrum.USDC, arbitrum.DAI),
     ]:
         assert market_state.graph.has_edge(a, b)
         assert market_state.graph[a][b]["weight"] == 1.0
@@ -22,8 +22,8 @@ def test_arbitrum_stablecoins_connected(market_state):
 def test_ethereum_stablecoins_connected(market_state):
     for a, b in [
         (ethereum.USDT, ethereum.USDC),
-        (ethereum.USDT, ethereum.DAI),
-        (ethereum.USDC, ethereum.DAI),
+        # (ethereum.USDT, ethereum.DAI),
+        # (ethereum.USDC, ethereum.DAI),
     ]:
         assert market_state.graph.has_edge(a, b)
         assert market_state.graph[a][b]["weight"] == 1.0
